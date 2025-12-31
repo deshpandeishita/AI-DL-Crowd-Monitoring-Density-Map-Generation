@@ -19,7 +19,22 @@ A modular, research-grade implementation for exploring, visualizing, and preproc
 
 ✔ Ready for training with any CNN-based crowd counting model
 
-📁 Project Structure crowd_monitoring/ │ ├── config.py ├── explore_dataset.py ├── main.py │ └── dataset/ ├── init.py ├── utils.py ├── visualization.py └── shanghaitech_dataset.py │ └── ShanghaiTech/ ├── part_A/ └── part_B/
+📁 Project Structure
+crowd_monitoring/
+│
+├── config.py
+├── explore_dataset.py
+├── main.py
+│
+└── dataset/
+    ├── __init__.py
+    ├── utils.py
+    ├── visualization.py
+    └── shanghaitech_dataset.py
+│
+└── ShanghaiTech/
+    ├── part_A/
+    └── part_B/
 
 📦 Installation
 
@@ -43,13 +58,21 @@ Density maps are generated using Gaussian kernels.
 
 You must download the dataset manually and place it like this:
 
-crowd_monitoring/ShanghaiTech/ part_A/ train_data/ test_data/ part_B/ train_data/ test_data/
+crowd_monitoring/ShanghaiTech/
+    part_A/
+        train_data/
+        test_data/
+    part_B/
+        train_data/
+        test_data/
 
-🧪 Usage 🔍 1. Explore the Dataset
+🧪 Usage
+🔍 1. Explore the Dataset
 
 Visualize images, density maps, and crowd distribution:
 
 python explore_dataset.py
+
 
 This will:
 
@@ -67,11 +90,14 @@ This checks if PyTorch Dataset + DataLoader works correctly:
 
 python main.py
 
+
 You should see output like:
 
-Image batch shape: torch.Size([2, 3, 256, 256]) Density batch shape: torch.Size([2, 1, 256, 256])
+Image batch shape: torch.Size([2, 3, 256, 256])
+Density batch shape: torch.Size([2, 1, 256, 256])
 
-🧩 Code Components 📌 dataset/utils.py
+🧩 Code Components
+📌 dataset/utils.py
 
 Loads .mat annotations
 
@@ -111,7 +137,9 @@ Density generation mode
 
 (Screenshots can be added here after running the scripts)
 
-Sample Image Density Map Histogram
+![Sample Image](assets/sample_image.png)
+![Density Map](assets/sample_density.png)
+![Histogram](assets/histogram.png)
 
 🚀 Future Work
 
@@ -125,8 +153,10 @@ Add real-time crowd counting demo
 
 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first.
+Pull requests are welcome!
+For major changes, please open an issue first.
 
 📄 License
 
 Apache License.
+
